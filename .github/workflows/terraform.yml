@@ -1,12 +1,16 @@
 name: 'Terraform'
 
+
+
+
 on:
   push:
     branches: [ "main" ]
   pull_request:
 
 permissions:
-  contents: read
+  id-token: write    # OIDC token ke liye required
+  contents: read     # Code checkout ke liye
 
 jobs:
   terraform:
