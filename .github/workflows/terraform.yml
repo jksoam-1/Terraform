@@ -13,7 +13,7 @@ jobs:
       - name: Varun
         run: echo "my name is varun"
 
-  2ndjob:
+  Secondjob:
     name: Ishani
     runs-on: ubuntu-latest
     steps:
