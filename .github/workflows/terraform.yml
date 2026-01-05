@@ -22,3 +22,32 @@ jobs:
           azcliversion: latest
           inlineScript: |
             az account show
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Set up Terraform
+      - name: Set up Terraform
+        uses: hashicorp/setup-terraform@v1
+        with:
+          terraform_version: '1.5.0'  # specify the version you want to use
+
+      # Initialize Terraform
+      - name: Terraform Init
+        run: terraform init
+
+      # Validate Terraform configuration
+      - name: Terraform Validate
+        run: terraform validate
+
+      # Format Terraform configuration
+      - name: Terraform Format
+        run: terraform fmt -check
+
+      # Plan Terraform changes
+      - name: Terraform Plan
+        run: terraform plan
+
+      # Apply Terraform changes (only on push to main)
+      - name: Terraform Apply
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        run: terraform apply -auto-approve  # Fixed the command here
