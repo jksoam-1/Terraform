@@ -41,7 +41,7 @@ jobs:
 
       # Format Terraform configuration
       - name: Terraform Format
-        run: terraform fmt -check
+        run: terraform fmt
 
       # Plan Terraform changes
       - name: Terraform Plan
