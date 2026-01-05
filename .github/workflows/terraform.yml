@@ -1,4 +1,4 @@
-name: Varun
+name: Varun & Ishani
 
 on:
   push:
@@ -12,3 +12,10 @@ jobs:
     steps:
       - name: Print name
         run: echo "my name is varun"
+
+  2ndjob:
+    name: Ishani
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print name
+        run: echo "my name is Ishani Singh"
