@@ -16,6 +16,7 @@ jobs:
   Secondjob:
     name: Ishani
     runs-on: ubuntu-latest
+    needs: firstjob
     steps:
       - name: Ishani
         run: echo "my name is Ishani Singh"
