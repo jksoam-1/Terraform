@@ -1,11 +1,14 @@
 name: Varun
 
 on:
-  push
-    - main
-job:
- firstjob:
-   name: varun
-   runs-on: ubuntu-latesh
-   run: echo "my name is varun"
-    
+  push:
+    branches:
+      - main
+
+jobs:
+  firstjob:
+    name: varun
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print name
+        run: echo "my name is varun"
