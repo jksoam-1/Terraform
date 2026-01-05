@@ -3,7 +3,7 @@ resource "azurerm_resource_group" "rg" {
     location = "West Europe"
   
 }
-resource "azurerm_resource_group" "rg" {
+resource "azurerm_resource_group" "rg1" {
     name     = "Ishani"
     location = "West Europe"
   
