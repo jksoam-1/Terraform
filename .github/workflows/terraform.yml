@@ -10,12 +10,12 @@ jobs:
     name: varun
     runs-on: ubuntu-latest
     steps:
-      - name: Print name
+      - name: Varun
         run: echo "my name is varun"
 
   2ndjob:
     name: Ishani
     runs-on: ubuntu-latest
     steps:
-      - name: Print name
+      - name: Ishani
         run: echo "my name is Ishani Singh"
